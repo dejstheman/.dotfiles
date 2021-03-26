@@ -8,14 +8,15 @@ alias zshhistory="less ~/.zsh_history"
 
 # git
 alias g="git"
-alias gaa="git add --all"
-alias gs="git status"
-alias gcm="gaa; git commit -m"
-alias gp="git push"
-alias gpf="git push --force"
-alias grsth="git reset --hard"
-alias gco="git checkout"
-alias gb="git branch"
+alias gaa="g add --all"
+alias gs="g status"
+alias gcm="gaa; g commit -m"
+alias gp="g push"
+alias gpf="g push --force"
+alias grsth="g reset --hard"
+alias gco="g checkout"
+alias gcob="g checkout -b"
+alias gb="g branch"
 alias pcm="pre-commit"
 
 # user-specific
