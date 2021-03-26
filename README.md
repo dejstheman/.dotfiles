@@ -5,3 +5,5 @@ To install dotfiles run:
 cd .dotfiles
 ./install.sh
 ```
+
+Restart terminal to load new plugins
