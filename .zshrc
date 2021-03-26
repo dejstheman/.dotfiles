@@ -54,7 +54,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # load aliases
-source ./.alias
+# shellcheck source=$HOME/.alias
+source ~/.alias
 
 # pipenv completions
 eval "$(pipenv --completion)"
