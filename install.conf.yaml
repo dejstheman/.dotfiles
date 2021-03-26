@@ -21,12 +21,10 @@
 - shell:
     - # homebrew
       command: brew bundle --file=./Brewfile
-      stdin: true
       stdout: true
       stderr: true
 
     - # oh-my-zsh
       command: ./.oh-my-zsh.sh
-      stdin: true
       stdout: true
       stderr: true

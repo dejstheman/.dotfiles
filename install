@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-pipenv install
-pipenv run dotbot -c ./install.conf.yaml
