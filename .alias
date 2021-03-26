@@ -27,6 +27,8 @@ alias pcm="pre-commit"
 
 # GitHub
 alias ghpr="gh pr create --title"
+alias ghapprove="gh pr review --approve"
+alias ghmerge="gh pr merge"
 
 # user-specific
 alias dev="cd ~/Documents/dev"
