@@ -10,7 +10,7 @@
 	status = auto
 	branch = auto
 [core]
-	editor = nano
+	editor = code --wait
 	excludesfile = /Users/deji/.gitignore
 	autocrlf = input
 [filter "lfs"]

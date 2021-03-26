@@ -1,0 +1,56 @@
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Jetbrains
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+jars/
+
+# vi
+*~
+
+# Gradle
+.gradle
+
+### logs ###
+log/
+*.log
+*.tmp
+*.gz
+
+### TypeScript ###
+# dependencies
+**/node_modules
+**/.pnp
+**/.pnp.js
+
+# testing
+**/coverage
+
+# production
+**/build
+
+# Node
+**/.DS_Store
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Spring
+**/application-local.yaml
+**/application-local.yml
+**/application-local.properties
+
+### PostgreSQL ###
+postgres-data

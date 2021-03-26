@@ -1,0 +1,155 @@
+tap "bazelbuild/tap"
+tap "caskformula/caskformula"
+tap "domt4/autoupdate"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/command-not-found"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "mongodb/brew"
+tap "romkatv/powerlevel10k"
+tap "sambadevi/powerlevel9k"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Platform built on V8 to build network applications
+brew "node"
+# CLI tool for Angular
+brew "angular-cli"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Development kit for the Java programming language
+brew "openjdk"
+# Light-weight XML database and XPath/XQuery processor
+brew "basex"
+# Programmable completion for Bash 3.2
+brew "bash-completion"
+# Friendly powerful distributed version control system
+brew "bazaar"
+# Google's own build tool
+brew "bazel"
+# Emacs dependency management
+brew "cask"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# AST-based pattern checker for JavaScript
+brew "eslint"
+# GNU compiler collection
+brew "gcc"
+# This library is for the GeoIP Legacy format (dat)
+brew "geoip"
+# Distributed revision control system
+brew "git"
+# AVH edition of git-flow
+brew "git-flow-avh"
+# Command-driven, interactive function plotting
+brew "gnuplot"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+# Package for scientific computing with Python
+brew "numpy"
+# Software for mathematics, science, and engineering
+brew "scipy"
+# Efficient network analysis for Python 3
+brew "graph-tool"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Java-based scripting language
+brew "groovy"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
+# Kubernetes package manager
+brew "helm"
+# Improved top (interactive process viewer)
+brew "htop"
+# Apache HTTP server
+brew "httpd", restart_service: true
+# Anti-bikeshedding Kotlin linter with built-in formatter
+brew "ktlint"
+# Compiler for the GObject type system
+brew "vala"
+# HTTP client/server library for GNOME
+brew "libsoup"
+# Lynx-like WWW browser that supports tables, menus, etc.
+brew "links"
+# Java-based project management
+brew "maven"
+# Scalable distributed version control system
+brew "mercurial"
+# Open source relational database management system
+brew "mysql", restart_service: true
+# Robust (fully ACID) transactional property graph database
+brew "neo4j"
+# Manage multiple Node.js versions
+brew "nvm"
+# CLI for Postgres with auto-completion and syntax highlighting
+brew "pgcli"
+# General-purpose scripting language
+brew "php"
+# Python dependency management tool
+brew "pipenv"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql", restart_service: true
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
+# Software environment for statistical computing
+brew "r"
+# Ruby version manager
+brew "rbenv"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
+# Build tool for Scala projects
+brew "sbt"
+# JVM-based programming language
+brew "scala"
+# Launcher to analyze a project with SonarQube
+brew "sonar-scanner"
+# Manage code quality
+brew "sonarqube"
+# Generate clients, server stubs, and docs from an OpenAPI spec
+brew "swagger-codegen"
+# Send macOS User Notifications from the command-line
+brew "terminal-notifier"
+# Terminal multiplexer
+brew "tmux"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# Tiny personal calendar
+brew "when"
+# JavaScript package manager
+brew "yarn"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
+# A Zsh Theme
+brew "romkatv/powerlevel10k/powerlevel10k"
+cask "aquaterm"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+cask "font-hack-nerd-font"
+# Web browser
+cask "google-chrome"
+# Vector graphics editor
+cask "inkscape"
+cask "java"
+cask "java8"
+# Full TeX Live distribution with GUI applications
+cask "mactex"
+# Open-source code editor
+cask "visual-studio-code"
