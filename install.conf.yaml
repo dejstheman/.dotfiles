@@ -17,6 +17,11 @@
     ~/.zshrc:
       force: true
       path: .zshrc
+    ~/.git-template/:
+      force: true
+      glob: true
+      create: true
+      path: .git-template/*
 
 - shell:
     - # homebrew

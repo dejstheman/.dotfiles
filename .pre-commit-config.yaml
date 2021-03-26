@@ -4,4 +4,3 @@ repos:
   hooks:
     - id: forbid-binary
     - id: shellcheck
-    - id: shfmt
