@@ -144,11 +144,5 @@ export PATH=$PATH:$(go env GOPATH)/bin
 # load aliases
 source ./.alias
 
-killPort(){
-    if [ $# -eq 0 ]; then
-        echo "No arguments provided"
-        echo "provide port of service you wish to kill"
-        exit 1
-    fi
-    kill $(lsof -t -i:$1)  
-}
+# pipenv completions
+eval "$(pipenv --completion)"
