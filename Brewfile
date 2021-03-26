@@ -134,6 +134,10 @@ brew "ruby"
 brew "sbt"
 # JVM-based programming language
 brew "scala"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Launcher to analyze a project with SonarQube
 brew "sonar-scanner"
 # Manage code quality
