@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/java,macos,windows,jetbrains+all,jetbrains+iml,jetbrains,go,kotlin,scala,python,jupyternotebooks,node,yarn,zsh,react,reactnative
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,macos,windows,jetbrains+all,jetbrains+iml,jetbrains,go,kotlin,scala,python,jupyternotebooks,node,yarn,zsh,react,reactnative
+# Created by https://www.toptal.com/developers/gitignore/api/go,zsh,java,yarn,node,react,scala,macos,python,kotlin,windows,jetbrains,reactnative,jetbrains+iml,jetbrains+all,jupyternotebooks,homebrew
+# Edit at https://www.toptal.com/developers/gitignore?templates=go,zsh,java,yarn,node,react,scala,macos,python,kotlin,windows,jetbrains,reactnative,jetbrains+iml,jetbrains+all,jupyternotebooks,homebrew
 
 ### Go ###
 # Binaries for programs and plugins
@@ -22,6 +22,9 @@
 ### Go Patch ###
 /vendor/
 /Godeps/
+
+### Homebrew ###
+Brewfile.lock.json
 
 ### Java ###
 # Compiled class file
@@ -904,4 +907,4 @@ zsdoc/data
 /tests/_output/*
 !/tests/_output/.gitkeep
 
-# End of https://www.toptal.com/developers/gitignore/api/java,macos,windows,jetbrains+all,jetbrains+iml,jetbrains,go,kotlin,scala,python,jupyternotebooks,node,yarn,zsh,react,reactnative
+# End of https://www.toptal.com/developers/gitignore/api/go,zsh,java,yarn,node,react,scala,macos,python,kotlin,windows,jetbrains,reactnative,jetbrains+iml,jetbrains+all,jupyternotebooks,homebrew

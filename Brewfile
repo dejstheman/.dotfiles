@@ -142,6 +142,8 @@ brew "speedtest-cli"
 brew "swagger-codegen"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -179,6 +181,8 @@ cask "font-hack-nerd-font"
 cask "github"
 # Web browser
 cask "google-chrome"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
 # Vector graphics editor
 cask "inkscape"
 cask "java"
