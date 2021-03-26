@@ -13,20 +13,14 @@ autosuggestions="$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 syntaxHighlighting="$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 completions="$ZSH_CUSTOM/plugins/zsh-completions"
 
-if [[ -d $autosuggestions ]]; then
-  echo "Auto suggestions plugin already installed"
-else
-  git clone https://github.com/zsh-users/zsh-autosuggestions "$autosuggestions"
-fi
+install_plugin() {
+  if [[ -d $1 ]]; then
+    echo "$2 plugin already installed"
+  else
+    git clone "$3" "$1"
+  fi
+}
 
-if [[ -d $syntaxHighlighting ]]; then
-  echo "Syntax Highlighting plugin already installed"
-else
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting "$syntaxHighlighting"
-fi
-
-if [[ -d $completions ]]; then
-  echo "Completions plugin already installed"
-else
-  git clone https://github.com/zsh-users/zsh-completions "$completions"
-fi
+install_plugin "$autosuggestions" "Auto suggestions" https://github.com/zsh-users/zsh-autosuggestions
+install_plugin "$syntaxHighlighting" "Syntax Highlighting" https://github.com/zsh-users/zsh-syntax-highlighting
+install_plugin "$completions" "Completions" https://github.com/zsh-users/zsh-completions
