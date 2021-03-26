@@ -45,6 +45,8 @@ brew "cask"
 brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # AST-based pattern checker for JavaScript
 brew "eslint"
 # GNU compiler collection
@@ -87,6 +89,8 @@ brew "vala"
 brew "libsoup"
 # Lynx-like WWW browser that supports tables, menus, etc.
 brew "links"
+# Mac App Store command-line interface
+brew "mas"
 # Java-based project management
 brew "maven"
 # Scalable distributed version control system
@@ -137,6 +141,8 @@ brew "terminal-notifier"
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Watch files and take action when they change
@@ -151,10 +157,19 @@ brew "yarn"
 brew "mongodb/brew/mongodb-community"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
+# Inspect application bundles
+cask "apparency"
 cask "aquaterm"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+cask "figma"
 cask "font-hack-nerd-font"
+# Desktop client for GitHub repositories
+cask "github"
 # Web browser
 cask "google-chrome"
 # Vector graphics editor
@@ -163,5 +178,36 @@ cask "java"
 cask "java8"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
+# QuickLook generator for Markdown files
+cask "qlmarkdown"
+cask "qlstephen"
+cask "qlvideo"
+cask "quicklook-json"
+# Team communication and collaboration software
+cask "slack"
+# Video game digital distribution service
+cask "steam"
 # Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "Adblock Plus", id: 1432731683
+mas "Dropover", id: 1355679052
+mas "DuckDuckGo Privacy Essentials", id: 1482920575
+mas "Easy CSV Editor", id: 1171346381
+mas "GarageBand", id: 682658836
+mas "Ghostery Lite", id: 1436953057
+mas "Grammarly for Safari", id: 1462114288
+mas "Honey", id: 1472777122
+mas "Image2icon", id: 992115977
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Spark", id: 1176895641
+mas "Unsplash Wallpapers", id: 1284863847
+mas "WhatsApp", id: 1147396723
