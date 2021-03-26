@@ -25,6 +25,9 @@ alias gm="g merge"
 alias gcleanup="g cleanup"
 alias pcm="pre-commit"
 
+# GitHub
+alias ghpr="gh pr create --title"
+
 # user-specific
 alias dev="cd ~/Documents/dev"
 alias projects="dev; cd projects/personal"

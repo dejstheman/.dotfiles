@@ -56,6 +56,8 @@ brew "eslint"
 brew "gcc"
 # This library is for the GeoIP Legacy format (dat)
 brew "geoip"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # AVH edition of git-flow
