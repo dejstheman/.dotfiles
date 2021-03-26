@@ -19,10 +19,14 @@ brew "python@3.8"
 brew "node"
 # CLI tool for Angular
 brew "angular-cli"
+# Record and share terminal sessions
+brew "asciinema"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Development kit for the Java programming language
@@ -39,6 +43,8 @@ brew "bazel"
 brew "cask"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Configurable talking characters in ASCII art
+brew "cowsay"
 # AST-based pattern checker for JavaScript
 brew "eslint"
 # GNU compiler collection
@@ -71,6 +77,8 @@ brew "helm"
 brew "htop"
 # Apache HTTP server
 brew "httpd", restart_service: true
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
 # Compiler for the GObject type system
@@ -119,10 +127,14 @@ brew "scala"
 brew "sonar-scanner"
 # Manage code quality
 brew "sonarqube"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
 # Generate clients, server stubs, and docs from an OpenAPI spec
 brew "swagger-codegen"
 # Send macOS User Notifications from the command-line
 brew "terminal-notifier"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Executes a program periodically, showing output fullscreen

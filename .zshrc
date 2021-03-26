@@ -145,10 +145,7 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-alias prepend-commit-atlassian="cp ~/.dev/git-hooks/atlassian/prepare-commit-msg .git/hooks/ && git init"
-alias prepend-commit-azure="cp ~/.dev/git-hooks/azure-devops/prepare-commit-msg .git/hooks/ && git init"
 alias grep="rg"
-
 alias myip="curl http://ipecho.net/plain; echo"
 alias c="clear"
 alias ll="ls -alrt"
@@ -168,6 +165,9 @@ alias gco="git checkout"
 alias pcm="pre-commit"
 alias d="docker"
 alias dc="docker-compose"
+alias b="brew"
+alias bi="b install"
+alias speed="speedtest-cli"
 
 killPort(){
     if [ $# -eq 0 ]; then
