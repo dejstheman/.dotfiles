@@ -10,3 +10,5 @@ brew install pipenv
 # install.sh the dot files
 pipenv install
 pipenv run dotbot -c ./install.conf.yaml
+
+source ./.zshrc
