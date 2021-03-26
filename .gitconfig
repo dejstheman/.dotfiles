@@ -1,0 +1,25 @@
+[user]
+	name = Deji Adepetun
+	email = 23409407+dejstheman@users.noreply.github.com
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[core]
+	editor = nano
+	excludesfile = /Users/deji/.gitignore
+	autocrlf = input
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[commit]
+	template = /Users/deji/.stCommitMsg
+[init]
+	templateDir = /Users/deji/.git-template
+	defaultBranch = main
