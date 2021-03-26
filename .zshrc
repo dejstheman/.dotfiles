@@ -139,36 +139,10 @@ export PATH=/usr/local/opt/scala/bin:$PATH
 export PATH=/usr/local/opt/sonar-scanner/bin:$PATH
 
 # Go
-export GOPATH=$HOME/Documents/dev/go
-export GOROOT=/usr/local/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
-alias grep="rg"
-alias myip="curl http://ipecho.net/plain; echo"
-alias c="clear"
-alias ll="ls -alrt"
-alias dev="cd ~/Documents/dev"
-alias projects="dev; cd projects/personal"
-alias open-source="dev; cd projects/open-source"
-alias profile="code ~/.zshrc"
-alias zshhistory="less ~/.zsh_history"
-alias g="git"
-alias gaa="git add --all"
-alias gs="git status"
-alias gcm="gaa; git commit -m"
-alias gp="git push"
-alias gpf="git push --force"
-alias grsth="git reset --hard"
-alias gco="git checkout"
-alias pcm="pre-commit"
-alias d="docker"
-alias dc="docker-compose"
-alias b="brew"
-alias bi="b install"
-alias bic="b install --cask"
-alias speed="speedtest-cli"
+# load aliases
+source ./.alias
 
 killPort(){
     if [ $# -eq 0 ]; then

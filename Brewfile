@@ -1,6 +1,7 @@
 tap "bazelbuild/tap"
 tap "caskformula/caskformula"
 tap "domt4/autoupdate"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -13,6 +14,8 @@ tap "romkatv/powerlevel10k"
 tap "sambadevi/powerlevel9k"
 # Command-line interface for SQLite
 brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Platform built on V8 to build network applications
@@ -59,6 +62,8 @@ brew "git"
 brew "git-flow-avh"
 # Command-driven, interactive function plotting
 brew "gnuplot"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Package for scientific computing with Python
@@ -153,6 +158,8 @@ brew "wget"
 brew "when"
 # JavaScript package manager
 brew "yarn"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # A Zsh Theme
