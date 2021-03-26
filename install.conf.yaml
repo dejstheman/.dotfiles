@@ -1,0 +1,26 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.alias:
+      force: true
+      path: .alias
+    ~/.gitconfig:
+      force: true
+      path: .gitconfig
+    ~/.gitignore:
+      force: true
+      path: .gitignore
+    ~/.zshrc:
+      force: true
+      path: .zshrc
+
+- shell:
+    -
+      command: brew bundle --file=./Brewfile
+      stdin: true
+      stdout: true
+      stderr: true
