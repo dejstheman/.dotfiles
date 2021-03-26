@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
-# install.sh command-line tools
+# install command-line tools
 sudo xcode-select --install
 
-# install.sh homebrew
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! which -s brew; then
+  # Install Homebrew
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
 brew install pipenv
 
-# install.sh the dot files
+# install the dot files
 pipenv install
 pipenv run dotbot -c ./install.conf.yaml
 
