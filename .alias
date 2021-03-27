@@ -8,6 +8,7 @@ alias zshhistory="less ~/.zsh_history"
 alias aliases="less ~/.alias"
 alias mkdir="mkdir -p"
 alias ln="ln -v"
+alias last="!$"
 
 # git
 alias g="git"
