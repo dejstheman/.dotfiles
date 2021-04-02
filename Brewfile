@@ -16,6 +16,8 @@ tap "sambadevi/powerlevel9k"
 brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Platform built on V8 to build network applications
 brew "node"
 # CLI tool for Angular
@@ -40,6 +42,8 @@ brew "bash-completion"
 brew "bazaar"
 # Google's own build tool
 brew "bazel"
+# GNU Emacs text editor
+brew "emacs"
 # Emacs dependency management
 brew "cask"
 # GNU File, Shell, and Text utilities
@@ -60,8 +64,6 @@ brew "gh"
 brew "git"
 # AVH edition of git-flow
 brew "git-flow-avh"
-# Network related modules for glib
-brew "glib-networking"
 # Command-driven, interactive function plotting
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
@@ -72,8 +74,6 @@ brew "gradle"
 brew "gtk+3"
 # Package for scientific computing with Python
 brew "numpy"
-# GNOME Python bindings (based on GObject Introspection)
-brew "pygobject3"
 # Software for mathematics, science, and engineering
 brew "scipy"
 # Efficient network analysis for Python 3
