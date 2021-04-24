@@ -296,6 +296,7 @@ ipython_config.py
 .DS_Store
 .AppleDouble
 .LSOverride
+*.icloud
 
 # Icon must end with two \r
 Icon
