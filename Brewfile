@@ -12,18 +12,22 @@ tap "homebrew/services"
 tap "mongodb/brew"
 tap "romkatv/powerlevel10k"
 tap "sambadevi/powerlevel9k"
-# Command-line interface for SQLite
-brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
+# Core application library for C
+brew "glib"
+# Toolkit for image loading and pixel buffer manipulation
+brew "gdk-pixbuf"
+# Icons for the GNOME project
+brew "adwaita-icon-theme"
 # Platform built on V8 to build network applications
 brew "node"
 # CLI tool for Angular
 brew "angular-cli"
 # Record and share terminal sessions
 brew "asciinema"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -42,16 +46,16 @@ brew "bash-completion"
 brew "bazaar"
 # Google's own build tool
 brew "bazel"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # GNU Emacs text editor
 brew "emacs"
 # Emacs dependency management
 brew "cask"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # AST-based pattern checker for JavaScript
 brew "eslint"
 # GNU compiler collection
@@ -64,6 +68,8 @@ brew "gh"
 brew "git"
 # AVH edition of git-flow
 brew "git-flow-avh"
+# Network related modules for glib
+brew "glib-networking"
 # Command-driven, interactive function plotting
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
@@ -160,6 +166,10 @@ brew "tldr"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Language for application scale JavaScript development
+brew "typescript"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Watch files and take action when they change
@@ -180,13 +190,17 @@ brew "mongodb/brew/mongodb-community"
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Inspect application bundles
 cask "apparency"
+# Grahics renderer
 cask "aquaterm"
+# Monitoring and security across systems, apps, and services
+cask "datadog-agent"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
+# Collaborative team software
 cask "figma"
 cask "font-hack-nerd-font"
 # Desktop client for GitHub repositories
@@ -218,25 +232,3 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Adblock Plus", id: 1432731683
-mas "CopyClip", id: 595191960
-mas "Dropover", id: 1355679052
-mas "DuckDuckGo Privacy Essentials", id: 1482920575
-mas "Duplicate File Finder", id: 1032755628
-mas "Easy CSV Editor", id: 1171346381
-mas "Evernote", id: 406056744
-mas "GarageBand", id: 682658836
-mas "Gestimer", id: 990588172
-mas "Ghostery Lite", id: 1436953057
-mas "Grammarly for Safari", id: 1462114288
-mas "Honey", id: 1472777122
-mas "Image2icon", id: 992115977
-mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Shazam", id: 897118787
-mas "Spark", id: 1176895641
-mas "Unsplash Wallpapers", id: 1284863847
-mas "WhatsApp", id: 1147396723
-mas "Xcode", id: 497799835
