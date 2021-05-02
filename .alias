@@ -33,7 +33,7 @@ alias ghapprove="gh pr review --approve"
 alias ghmerge="gh pr merge"
 
 # user-specific
-alias dev="cd ~/Documents/dev"
+alias dev="cd ~/Documents/dev.nosync"
 alias projects="dev; cd projects/personal"
 alias open-source="dev; cd projects/open-source"
 
