@@ -1,4 +1,5 @@
 tap "bazelbuild/tap"
+tap "buildpacks/tap"
 tap "caskformula/caskformula"
 tap "domt4/autoupdate"
 tap "heroku/brew"
@@ -12,6 +13,8 @@ tap "homebrew/services"
 tap "mongodb/brew"
 tap "romkatv/powerlevel10k"
 tap "sambadevi/powerlevel9k"
+# Run your GitHub Actions locally 🚀
+brew "act"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Core application library for C
@@ -182,6 +185,8 @@ brew "when"
 brew "yarn"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# A CLI for building apps using Cloud Native Buildpacks
+brew "buildpacks/tap/pack"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
@@ -224,6 +229,8 @@ cask "qlvideo"
 cask "quicklook-json"
 # Team communication and collaboration software
 cask "slack"
+# Music streaming service
+cask "spotify"
 # Video game digital distribution service
 cask "steam"
 # Open-source code editor
@@ -232,3 +239,26 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Adblock Plus", id: 1432731683
+mas "CopyClip", id: 595191960
+mas "Dropover", id: 1355679052
+mas "DuckDuckGo Privacy Essentials", id: 1482920575
+mas "Duplicate File Finder", id: 1032755628
+mas "Easy CSV Editor", id: 1171346381
+mas "Evernote", id: 406056744
+mas "GarageBand", id: 682658836
+mas "Gestimer", id: 990588172
+mas "Ghostery Lite", id: 1436953057
+mas "Grammarly for Safari", id: 1462114288
+mas "Honey", id: 1472777122
+mas "Image2icon", id: 992115977
+mas "JSONPeep", id: 1458969831
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Shazam", id: 897118787
+mas "Spark", id: 1176895641
+mas "Unsplash Wallpapers", id: 1284863847
+mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
