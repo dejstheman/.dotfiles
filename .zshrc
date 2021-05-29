@@ -16,6 +16,9 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
+# lets files beginning with a . be matched without explicitly specifying the dot.
+setopt globdots
+
 # shellcheck disable=SC2034
 plugins=(
     git
@@ -25,6 +28,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-completions
+    fzf-tab
     )
 autoload -U compinit && compinit
 

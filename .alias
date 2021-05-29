@@ -7,6 +7,7 @@ alias zshhistory="less ~/.zsh_history"
 alias aliases="less ~/.alias"
 alias mkdir="mkdir -p"
 alias ln="ln -v"
+alias rimraf="rm -rf"
 
 # git
 alias g="git"
@@ -59,3 +60,4 @@ alias ya="y add"
 alias yad="y add -D"
 alias yi="y install"
 alias yberry="y set version berry"
+alias ysources="y set version from sources"
