@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ ! -d  "$HOME/.tmux/plugins/tpm" ]; then
   echo "Tmux Package Manager does not exist. Cloning it to ~/.tmux/plugins/tpm"

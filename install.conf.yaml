@@ -20,6 +20,9 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
+    ~/.gitmux.conf:
+      force: true
+      path: .gitmux.conf
     /usr/local/bin/tmux-spotify-info.scpt:
       force: true
       path: tmux/.tmux-spotify-info.scpt
@@ -42,5 +45,10 @@
 
     - # tmux package manager
       command: ./tmux/tpm.sh
+      stdout: true
+      stderr: true
+
+    - # gitmux
+      command: ./tmux/gitmux.sh
       stdout: true
       stderr: true
