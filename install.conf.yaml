@@ -20,6 +20,9 @@
     ~/.tmux.conf:
       force: true
       path: .tmux.conf
+    /usr/local/bin/tmux-spotify-info.scpt:
+      force: true
+      path: tmux/.tmux-spotify-info.scpt
     ~/.git-template/:
       force: true
       glob: true
@@ -34,5 +37,10 @@
 
     - # oh-my-zsh
       command: ./.oh-my-zsh.sh
+      stdout: true
+      stderr: true
+
+    - # tmux package manager
+      command: ./tmux/tpm.sh
       stdout: true
       stderr: true
