@@ -17,6 +17,9 @@
     ~/.zshrc:
       force: true
       path: .zshrc
+    ~/.tmux.conf:
+      force: true
+      path: .tmux.conf
     ~/.git-template/:
       force: true
       glob: true
