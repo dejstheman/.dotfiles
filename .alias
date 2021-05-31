@@ -26,8 +26,8 @@ alias gb="g branch"
 alias gm="g merge"
 alias gcleanup="g cleanup"
 alias gstash="g stash"
-alias gapply="g apply"
-alias gpop="g pop"
+alias gapply="gstash apply"
+alias gpop="gstash pop"
 alias pcm="pre-commit"
 
 # GitHub
