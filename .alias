@@ -37,7 +37,8 @@ alias ghmerge="gh pr merge"
 
 # user-specific
 alias dev="cd ~/Documents/dev.nosync"
-alias projects="dev; cd projects/personal"
+alias personal="dev; cd projects/personal"
+alias work="dev; cd projects/work"
 alias open-source="dev; cd projects/open-source"
 
 # docker
