@@ -167,6 +167,8 @@ brew "swagger-codegen"
 brew "terminal-notifier"
 # Tool to build, change, and version infrastructure
 brew "terraform"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -243,6 +245,7 @@ cask "visual-studio-code"
 cask "vlc"
 # Video communication and virtual meeting platform
 cask "zoom"
+
 mas "AdBlock", id: 1402042596
 mas "CopyClip", id: 595191960
 mas "Dropover", id: 1355679052

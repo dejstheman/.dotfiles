@@ -298,9 +298,6 @@ ipython_config.py
 .LSOverride
 *.icloud
 
-# Icon must end with two \r
-Icon
-
 
 # Thumbnails
 ._*
