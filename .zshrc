@@ -29,6 +29,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-completions
     fzf-tab
+    git-open
     )
 autoload -U compinit && compinit
 
