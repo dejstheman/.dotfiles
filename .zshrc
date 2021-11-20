@@ -71,3 +71,4 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 
 eval $(thefuck --alias)
+export PATH="/usr/local/opt/node@16/bin:$PATH"

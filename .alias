@@ -60,6 +60,7 @@ alias pip="/usr/local/bin/pip3"
 # yarn
 alias y="yarn"
 alias yb="y build"
+alias ybf="y build:force"
 alias yt="y test"
 alias ys="y start"
 alias ya="y add"
