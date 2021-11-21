@@ -24,7 +24,7 @@ plugins=(
     git
     colorize
     brew
-    osx
+    macos
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-completions
