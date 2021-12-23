@@ -24,7 +24,7 @@ plugins=(
     git
     colorize
     brew
-    osx
+    macos
     zsh-autosuggestions
     zsh-syntax-highlighting
     zsh-completions
@@ -63,7 +63,17 @@ export PATH=$PATH:$(go env GOPATH)/bin
 source ~/.alias
 
 # pipenv completions
-eval "$(pipenv --completion)"
+export BASE_SHELL=$(basename $SHELL)
+
+if [[ "$BASE_SHELL" == "zsh" ]] ; then
+autoload bashcompinit && bashcompinit
+fi
+
+_pipenv-pipes_completions() {
+COMPREPLY=($(compgen -W "$(pipes --_completion)" -- "${COMP_WORDS[1]}"))
+}
+
+complete -F _pipenv-pipes_completions pipes
 
 # Google cloud
 source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
@@ -71,3 +81,4 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 
 eval $(thefuck --alias)
+export PATH="/usr/local/opt/node@16/bin:$PATH"
