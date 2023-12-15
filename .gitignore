@@ -547,9 +547,7 @@ celerybeat.pid
 # .env
 .env/
 .venv/
-env/
 venv/
-ENV/
 env.bak/
 venv.bak/
 pythonenv*
@@ -615,7 +613,6 @@ __generated__
 # Java class files
 
 # Generated files
-bin/
 gen/
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
 # release/

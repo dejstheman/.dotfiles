@@ -3,6 +3,7 @@ tap "bazelbuild/tap"
 tap "buildpacks/tap"
 tap "caskformula/caskformula"
 tap "domt4/autoupdate"
+tap "hashicorp/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -14,24 +15,38 @@ tap "homebrew/services"
 tap "mongodb/brew"
 tap "romkatv/powerlevel10k"
 tap "sambadevi/powerlevel9k"
-# Run your GitHub Actions locally 🚀
+# Run your GitHub Actions locally
 brew "act"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Core application library for C
 brew "glib"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
-# Platform built on V8 to build network applications
-brew "node"
 # CLI tool for Angular
 brew "angular-cli"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
+# Apache Portable Runtime library
+brew "apr"
+# Companion library to apr, the Apache Portable Runtime library
+brew "apr-util"
+# Password hashing library and CLI utility
+brew "argon2"
 # Record and share terminal sessions
 brew "asciinema"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
+# Query git repositories with SQL. Generate reports, perform status checks, analyze codebases. 🔍 📊
+brew "askgit"
+# Spell checker with better logic than ispell
+brew "aspell"
+# Portable library for importing many well-known 3D model formats
+brew "assimp"
+# Protocol definitions and daemon for D-Bus at-spi
+brew "at-spi2-core"
+# Official C++ interface for the ATK accessibility toolkit library
+brew "atkmm"
+# Official C++ interface for the ATK accessibility toolkit library
+brew "atkmm@2.28"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -50,18 +65,28 @@ brew "bash-completion"
 brew "bazaar"
 # Google's own build tool
 brew "bazel"
+# Garbage collector for C and C++
+brew "bdw-gc"
+# Collection of portable C++ source libraries
+brew "boost"
+# C++ build system
+brew "boost-build"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # GNU Emacs text editor
 brew "emacs"
 # Emacs dependency management
 brew "cask"
+# Create and view interactive cheat sheets for *nix commands
+brew "cheat"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
 # AST-based pattern checker for JavaScript
 brew "eslint"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -74,8 +99,12 @@ brew "gh"
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Small git utilities
+brew "git-extras"
 # AVH edition of git-flow
 brew "git-flow-avh"
+# Audit git repos for secrets
+brew "gitleaks"
 # Network related modules for glib
 brew "glib-networking"
 # Command-driven, interactive function plotting
@@ -108,10 +137,16 @@ brew "htop"
 brew "httpd", restart_service: true
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Statically typed programming language for the JVM
+brew "kotlin"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
-# Compiler for the GObject type system
-brew "vala"
+# Build tool for Clojure
+brew "leiningen"
+# Tool for managing JavaScript projects with multiple packages
+brew "lerna"
+# Implementation of the file(1) command
+brew "libmagic"
 # HTTP client/server library for GNOME
 brew "libsoup"
 # Lynx-like WWW browser that supports tables, menus, etc.
@@ -126,20 +161,34 @@ brew "mercurial"
 brew "mysql", restart_service: true
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
+# Platform built on V8 to build network applications
+brew "node@16"
 # Manage multiple Node.js versions
 brew "nvm"
+# Development kit for the Java programming language
+brew "openjdk@17"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
-# General-purpose scripting language
-brew "php"
+# Tool for creating isolated virtual python environments
+brew "virtualenv", link: false
 # Python dependency management tool
-brew "pipenv"
+brew "pipenv", link: false
+# Fast, disk space efficient package manager
+brew "pnpm", link: false
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
-brew "postgresql", restart_service: true
+brew "postgresql@14"
+# Theme for zsh
+brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Python version management
+brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9"
 # Software environment for statistical computing
 brew "r"
 # Ruby version manager
@@ -147,7 +196,7 @@ brew "rbenv"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Persistent key-value database, with built-in net interface
-brew "redis"
+brew "redis", restart_service: true
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
@@ -178,14 +227,18 @@ brew "thefuck"
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Language for application scale JavaScript development
 brew "typescript"
-# Tool for creating isolated virtual python environments
-brew "virtualenv"
+# Compiler for the GObject type system
+brew "vala"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Execute commands when watched files change
+brew "watchexec"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
@@ -196,19 +249,17 @@ brew "when"
 brew "yarn"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
-# Query git repositories with SQL. Generate reports, perform status checks, analyze codebases. 🔍 📊
-brew "askgitdev/askgit/askgit"
 # A CLI for building apps using Cloud Native Buildpacks
 brew "buildpacks/tap/pack"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-# A Zsh Theme
-brew "romkatv/powerlevel10k/powerlevel10k"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Inspect application bundles
 cask "apparency"
-# Grahics renderer
+# Graphics renderer
 cask "aquaterm"
 # Monitoring and security across systems, apps, and services
 cask "datadog-agent"
@@ -220,6 +271,7 @@ cask "docker"
 cask "dropbox"
 # Collaborative team software
 cask "figma"
+# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
 # Desktop client for GitHub repositories
 cask "github"
@@ -229,18 +281,18 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 # Vector graphics editor
 cask "inkscape"
-cask "java"
 cask "java8"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# Visual tool to design, develop and administer MySQL servers
-cask "mysqlworkbench"
 # QuickLook plug-in that renders source code with syntax highlighting
 cask "qlcolorcode"
 # QuickLook generator for Markdown files
 cask "qlmarkdown"
+# QuickLook plugin for plaintext files without an extension
 cask "qlstephen"
+# Thumbnails, static previews, cover art and metadata for video files
 cask "qlvideo"
+# QuickLook plugin for JSON files
 cask "quicklook-json"
 # Team communication and collaboration software
 cask "slack"
@@ -252,5 +304,95 @@ cask "steam"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Rust-based terminal
+cask "warp"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "AdBlock", id: 1402042596
+mas "AdGuard for Safari", id: 1440147259
+mas "CopyClip", id: 595191960
+mas "Dropover", id: 1355679052
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "Duplicate File Finder", id: 1032755628
+mas "Easy CSV Editor", id: 1171346381
+mas "Evernote", id: 406056744
+mas "GarageBand", id: 682658836
+mas "Ghostery – Privacy Ad Blocker", id: 1436953057
+mas "Grammarly for Safari", id: 1462114288
+mas "Image2icon", id: 992115977
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Medis", id: 1579200037
+mas "Microsoft Outlook", id: 985367838
+mas "Notion Web Clipper", id: 1559269364
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PayPal Honey", id: 1472777122
+mas "Spark", id: 1176895641
+mas "Unsplash Wallpapers", id: 1284863847
+mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
+vscode "abusaidm.html-snippets"
+vscode "alefragnani.Bookmarks"
+vscode "bajdzis.vscode-database"
+vscode "CoenraadS.bracket-pair-colorizer"
+vscode "dbaeumer.vscode-eslint"
+vscode "donjayamanne.githistory"
+vscode "eamodio.gitlens"
+vscode "ecmel.vscode-html-css"
+vscode "EditorConfig.EditorConfig"
+vscode "eg2.tslint"
+vscode "eg2.vscode-npm-script"
+vscode "Equinusocio.vsc-community-material-theme"
+vscode "Equinusocio.vsc-material-theme"
+vscode "equinusocio.vsc-material-theme-icons"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-close-tag"
+vscode "formulahendry.auto-rename-tag"
+vscode "formulahendry.code-runner"
+vscode "golang.go"
+vscode "HookyQR.beautify"
+vscode "James-Yu.latex-workshop"
+vscode "k--kato.intellij-idea-keybindings"
+vscode "kiteco.kite"
+vscode "mathiasfrohlich.Kotlin"
+vscode "matt-meyers.vscode-dbml"
+vscode "mechatroner.rainbow-csv"
+vscode "Mikael.Angular-BeastCode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-mssql.data-workspace-vscode"
+vscode "ms-mssql.mssql"
+vscode "ms-mssql.sql-bindings-vscode"
+vscode "ms-mssql.sql-database-projects-vscode"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode.azurecli"
+vscode "msjsdiag.debugger-for-chrome"
+vscode "msjsdiag.vscode-react-native"
+vscode "negokaz.live-server-preview"
+vscode "PKief.material-icon-theme"
+vscode "redhat.java"
+vscode "redhat.vscode-yaml"
+vscode "ritwickdey.LiveServer"
+vscode "scala-lang.scala"
+vscode "sidthesloth.html5-boilerplate"
+vscode "techer.open-in-browser"
+vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
+vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vscode-icons-team.vscode-icons"
+vscode "Wscats.eno"
+vscode "xabikos.JavaScriptSnippets"
+vscode "yzhang.markdown-all-in-one"

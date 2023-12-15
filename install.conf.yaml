@@ -5,27 +5,34 @@
 - clean: ['~']
 
 - link:
-    ~/.alias:
-      force: true
-      path: .alias
     ~/.gitconfig:
       force: true
       path: .gitconfig
+
     ~/.gitignore:
       force: true
       path: .gitignore
+
+    ~/.alacritty.yml:
+      force: true
+      path: .alacritty.yml
+
     ~/.zshrc:
       force: true
-      path: .zshrc
+      path: zsh/.zshrc
+
+    ~/.alias:
+      force: true
+      path: zsh/.alias
+
     ~/.tmux.conf:
       force: true
-      path: .tmux.conf
-    ~/.gitmux.conf:
+      path: tmux/.tmux.conf
+
+    ~/.p10k.zsh:
       force: true
-      path: .gitmux.conf
-    /usr/local/bin/tmux-spotify-info.scpt:
-      force: true
-      path: tmux/.tmux-spotify-info.scpt
+      path: zsh/.p10k.zsh
+
     ~/.git-template/:
       force: true
       glob: true
@@ -39,16 +46,11 @@
       stderr: true
 
     - # oh-my-zsh
-      command: ./.oh-my-zsh.sh
+      command: ./zsh/.oh-my-zsh.sh
       stdout: true
       stderr: true
 
     - # tmux package manager
       command: ./tmux/tpm.sh
-      stdout: true
-      stderr: true
-
-    - # gitmux
-      command: ./tmux/gitmux.sh
       stdout: true
       stderr: true
