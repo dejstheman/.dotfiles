@@ -50,7 +50,7 @@ then
 fi
 
 # shellcheck disable=SC2155
-export JAVA_HOME=$(/usr/libexec/java_home -v '11')
+export JAVA_HOME=$(/usr/libexec/java_home -v '17')
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -82,3 +82,19 @@ source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
 
 eval $(thefuck --alias)
 export PATH="/usr/local/opt/node@16/bin:$PATH"
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
+# pnpm
+export PNPM_HOME="/Users/deji/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+preexec() {
+if [ "$(id -u)" -ne 0 ]; then
+echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $ $3" >> ~/.logs/zsh-history-$(date "+%Y-%m-%d").log;
+fi
+}
+
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

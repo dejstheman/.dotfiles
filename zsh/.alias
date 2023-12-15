@@ -24,17 +24,12 @@ alias gco="g checkout"
 alias gcom="gco main || gco master; gpl"
 alias gcob="gco -b"
 alias gb="g branch"
-alias gm="g merge"
 alias gcleanup="g cleanup"
 alias gstash="g stash"
 alias gapply="gstash apply"
 alias gpop="gstash pop"
+alias guptodate="g fetch; g rebase origin/main || gco main || gco master"
 alias pcm="pre-commit"
-
-# GitHub
-alias ghpr="gh pr create --title"
-alias ghapprove="gh pr review --approve"
-alias ghmerge="gh pr merge"
 
 # user-specific
 alias dev="cd ~/Documents/dev.nosync"
@@ -57,14 +52,5 @@ alias bup="b update && b upgrade && b cleanup"
 alias python="/usr/local/bin/python3"
 alias pip="/usr/local/bin/pip3"
 
-# yarn
-alias y="yarn"
-alias yb="y build"
-alias ybf="y build:force"
-alias yt="y test"
-alias ys="y start"
-alias ya="y add"
-alias yad="y add -D"
-alias yi="y install"
-alias yberry="y set version berry"
-alias ysources="y set version from sources"
+# terraform
+alias tf="terraform"
