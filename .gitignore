@@ -903,3 +903,5 @@ zsdoc/data
 !/tests/_output/.gitkeep
 
 # End of https://www.toptal.com/developers/gitignore/api/go,zsh,java,yarn,node,react,scala,macos,python,kotlin,windows,jetbrains,reactnative,jetbrains+iml,jetbrains+all,jupyternotebooks,homebrew
+
+ignore.schema.gql

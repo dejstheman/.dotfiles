@@ -13,9 +13,9 @@
       force: true
       path: .gitignore
 
-    ~/.alacritty.yml:
+    ~/.alacritty.toml:
       force: true
-      path: .alacritty.yml
+      path: .alacritty.toml
 
     ~/.zshrc:
       force: true
