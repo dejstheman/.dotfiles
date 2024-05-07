@@ -29,14 +29,13 @@ plugins=(
     zsh-syntax-highlighting
     zsh-completions
     fzf-tab
-    git-open
+    dotenv
+    poetry
     )
 autoload -U compinit && compinit
 
 # shellcheck source=$ZSH/oh-my-zsh.sh
 source "$ZSH"/oh-my-zsh.sh
-
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # shellcheck source=$HOME/.p10k.zsh
@@ -48,9 +47,6 @@ if
 then
     eval "$(brew command-not-found-init)";
 fi
-
-# shellcheck disable=SC2155
-export JAVA_HOME=$(/usr/libexec/java_home -v '17')
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -75,9 +71,11 @@ COMPREPLY=($(compgen -W "$(pipes --_completion)" -- "${COMP_WORDS[1]}"))
 
 complete -F _pipenv-pipes_completions pipes
 
+export LANG="en_US.UTF-8"
+
 # Google cloud
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
-source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 
 eval $(thefuck --alias)
@@ -100,3 +98,19 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 [ -f "/Users/deji/.ghcup/env" ] && source "/Users/deji/.ghcup/env" # ghcup-env
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2024-01-09 14:46:49
+export PATH="$PATH:/Users/deji/.local/bin"
+
+eval "$(register-python-argcomplete pipx)"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

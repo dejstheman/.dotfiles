@@ -6,11 +6,9 @@ tap "domt4/autoupdate"
 tap "hashicorp/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/command-not-found"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "mongodb/brew"
 tap "romkatv/powerlevel10k"
@@ -23,6 +21,8 @@ brew "glib"
 brew "gdk-pixbuf"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # CLI tool for Angular
 brew "angular-cli"
 # Codec library for encoding and decoding AV1 video streams
@@ -35,8 +35,14 @@ brew "apr-util"
 brew "argon2"
 # Record and share terminal sessions
 brew "asciinema"
-# Query git repositories with SQL. Generate reports, perform status checks, analyze codebases. 🔍 📊
-brew "askgit"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Portable library for importing many well-known 3D model formats
@@ -47,10 +53,8 @@ brew "at-spi2-core"
 brew "atkmm"
 # Official C++ interface for the ATK accessibility toolkit library
 brew "atkmm@2.28"
-# Automatic configure script builder
-brew "autoconf"
-# Tool for generating GNU Standards-compliant Makefiles
-brew "automake"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Microsoft Azure CLI 2.0
@@ -61,8 +65,6 @@ brew "openjdk"
 brew "basex"
 # Programmable completion for Bash 3.2
 brew "bash-completion"
-# Friendly powerful distributed version control system
-brew "bazaar"
 # Google's own build tool
 brew "bazel"
 # Garbage collector for C and C++
@@ -71,8 +73,6 @@ brew "bdw-gc"
 brew "boost"
 # C++ build system
 brew "boost-build"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
 # GNU Emacs text editor
 brew "emacs"
 # Emacs dependency management
@@ -111,6 +111,8 @@ brew "glib-networking"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Bash and Zsh completion for Gradle
@@ -127,6 +129,10 @@ brew "graph-tool"
 brew "graphviz"
 # Java-based scripting language
 brew "groovy"
+# Interactive web UI for gRPC, along the lines of postman
+brew "grpcui"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
 # Kubernetes package manager
@@ -157,6 +163,8 @@ brew "mas"
 brew "maven"
 # Scalable distributed version control system
 brew "mercurial"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Open source relational database management system
 brew "mysql", restart_service: true
 # Robust (fully ACID) transactional property graph database
@@ -169,8 +177,6 @@ brew "nvm"
 brew "openjdk@17"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
-# Tool for creating isolated virtual python environments
-brew "virtualenv", link: false
 # Python dependency management tool
 brew "pipenv", link: false
 # Fast, disk space efficient package manager
@@ -178,11 +184,13 @@ brew "pnpm", link: false
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
-brew "postgresql@14"
+brew "postgresql@16"
 # Theme for zsh
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Python version management
 brew "pyenv"
 # Interpreted, interactive, object-oriented programming language
@@ -255,8 +263,6 @@ brew "buildpacks/tap/pack"
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Inspect application bundles
 cask "apparency"
 # Graphics renderer
@@ -265,14 +271,14 @@ cask "aquaterm"
 cask "datadog-agent"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Collaborative team software
 cask "figma"
 # Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
+# Superfamily of fonts for code
+cask "font-monaspace"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
@@ -281,7 +287,6 @@ cask "google-chrome"
 cask "google-cloud-sdk"
 # Vector graphics editor
 cask "inkscape"
-cask "java8"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # QuickLook plug-in that renders source code with syntax highlighting
@@ -294,10 +299,6 @@ cask "qlstephen"
 cask "qlvideo"
 # QuickLook plugin for JSON files
 cask "quicklook-json"
-# Team communication and collaboration software
-cask "slack"
-# Music streaming service
-cask "spotify"
 # Video game digital distribution service
 cask "steam"
 # Open-source code editor
@@ -310,7 +311,6 @@ cask "warp"
 cask "zoom"
 mas "AdBlock", id: 1402042596
 mas "AdGuard for Safari", id: 1440147259
-mas "CopyClip", id: 595191960
 mas "Dropover", id: 1355679052
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "Duplicate File Finder", id: 1032755628
@@ -321,14 +321,8 @@ mas "Ghostery – Privacy Ad Blocker", id: 1436953057
 mas "Grammarly for Safari", id: 1462114288
 mas "Image2icon", id: 992115977
 mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
-mas "Medis", id: 1579200037
-mas "Microsoft Outlook", id: 985367838
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "PayPal Honey", id: 1472777122
-mas "Spark", id: 1176895641
-mas "Unsplash Wallpapers", id: 1284863847
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835

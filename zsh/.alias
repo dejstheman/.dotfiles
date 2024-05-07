@@ -49,8 +49,8 @@ alias bdump="b bundle dump --describe"
 alias bup="b update && b upgrade && b cleanup"
 
 # python
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
+# alias python="/opt/homebrew/bin/python3"
+# alias pip="/opt/homebrew/bin/pip3"
 
 # terraform
 alias tf="terraform"
