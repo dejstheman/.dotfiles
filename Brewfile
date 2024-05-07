@@ -15,14 +15,20 @@ tap "romkatv/powerlevel10k"
 tap "sambadevi/powerlevel9k"
 # Run your GitHub Actions locally
 brew "act"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Core application library for C
 brew "glib"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
 # CLI tool for Angular
 brew "angular-cli"
 # Codec library for encoding and decoding AV1 video streams
@@ -59,8 +65,6 @@ brew "python@3.11"
 brew "awscli"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
-# Development kit for the Java programming language
-brew "openjdk"
 # Light-weight XML database and XPath/XQuery processor
 brew "basex"
 # Programmable completion for Bash 3.2
@@ -69,24 +73,40 @@ brew "bash-completion"
 brew "bazel"
 # Garbage collector for C and C++
 brew "bdw-gc"
+# Toolchain of the web
+brew "biome"
 # Collection of portable C++ source libraries
 brew "boost"
 # C++ build system
 brew "boost-build"
+# C++ library for C++/Python3 interoperability
+brew "boost-python3"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
 # GNU Emacs text editor
 brew "emacs"
 # Emacs dependency management
 brew "cask"
 # Create and view interactive cheat sheets for *nix commands
 brew "cheat"
+# Cross-platform make
+brew "cmake"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Suite of command-line tools for converting to and working with CSV
+brew "csvkit"
 # Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Lightning-fast linter for .env files written in Rust
+brew "dotenv-linter"
 # AST-based pattern checker for JavaScript
 brew "eslint"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -107,6 +127,8 @@ brew "git-flow-avh"
 brew "gitleaks"
 # Network related modules for glib
 brew "glib-networking"
+# Cross-platform application and UI framework
+brew "qt"
 # Command-driven, interactive function plotting
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
@@ -121,6 +143,8 @@ brew "gradle-completion"
 brew "gtk+3"
 # Package for scientific computing with Python
 brew "numpy"
+# Python library for creating static, animated, and interactive visualizations
+brew "python-matplotlib"
 # Software for mathematics, science, and engineering
 brew "scipy"
 # Efficient network analysis for Python 3
@@ -141,10 +165,14 @@ brew "helm"
 brew "htop"
 # Apache HTTP server
 brew "httpd", restart_service: true
+# Command-line benchmarking tool
+brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Statically typed programming language for the JVM
 brew "kotlin"
+# Package manager for kubectl plugins
+brew "krew"
 # Anti-bikeshedding Kotlin linter with built-in formatter
 brew "ktlint"
 # Build tool for Clojure
@@ -157,30 +185,36 @@ brew "libmagic"
 brew "libsoup"
 # Lynx-like WWW browser that supports tables, menus, etc.
 brew "links"
+# CLI for Node.js style checker and lint tool for Markdown files
+brew "markdownlint-cli"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
 brew "maven"
+# Fly through your shell history
+brew "mcfly"
 # Scalable distributed version control system
 brew "mercurial"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # Robust (fully ACID) transactional property graph database
 brew "neo4j"
 # Platform built on V8 to build network applications
 brew "node@16"
 # Manage multiple Node.js versions
 brew "nvm"
-# Development kit for the Java programming language
-brew "openjdk@17"
+# Apache Parquet command-line tools and utilities
+brew "parquet-cli"
 # CLI for Postgres with auto-completion and syntax highlighting
 brew "pgcli"
 # Python dependency management tool
 brew "pipenv", link: false
 # Fast, disk space efficient package manager
-brew "pnpm", link: false
+brew "pnpm"
+# Python package management tool
+brew "poetry"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -189,14 +223,12 @@ brew "postgresql@16"
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Modern replacement for ps written by Rust
+brew "procs"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
 # Python version management
 brew "pyenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Software environment for statistical computing
 brew "r"
 # Ruby version manager
@@ -209,6 +241,8 @@ brew "redis", restart_service: true
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
 # Build tool for Scala projects
 brew "sbt"
 # JVM-based programming language
@@ -276,6 +310,8 @@ cask "dropbox"
 # Collaborative team software
 cask "figma"
 # Developer targeted fonts with a high number of glyphs
+cask "font-fira-code-nerd-font"
+# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
 # Superfamily of fonts for code
 cask "font-monaspace"
@@ -289,15 +325,13 @@ cask "google-cloud-sdk"
 cask "inkscape"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# QuickLook plug-in that renders source code with syntax highlighting
-cask "qlcolorcode"
-# QuickLook generator for Markdown files
+# Quick Look generator for Markdown files
 cask "qlmarkdown"
-# QuickLook plugin for plaintext files without an extension
+# Quick Look plugin for plaintext files without an extension
 cask "qlstephen"
 # Thumbnails, static previews, cover art and metadata for video files
 cask "qlvideo"
-# QuickLook plugin for JSON files
+# Quick Look plugin for JSON files
 cask "quicklook-json"
 # Video game digital distribution service
 cask "steam"
@@ -307,6 +341,8 @@ cask "visual-studio-code"
 cask "vlc"
 # Rust-based terminal
 cask "warp"
+# Multiplayer code editor
+cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "AdBlock", id: 1402042596

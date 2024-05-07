@@ -29,9 +29,9 @@
       force: true
       path: tmux/.tmux.conf
 
-    ~/.p10k.zsh:
+    ~/.config/starship.toml:
       force: true
-      path: zsh/.p10k.zsh
+      path: zsh/starship.toml
 
     ~/.git-template/:
       force: true
