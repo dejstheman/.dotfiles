@@ -301,8 +301,6 @@ brew "mongodb/brew/mongodb-community"
 cask "apparency"
 # Graphics renderer
 cask "aquaterm"
-# Monitoring and security across systems, apps, and services
-cask "datadog-agent"
 # Voice and text chat software
 cask "discord"
 # Client for the Dropbox cloud storage service

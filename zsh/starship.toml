@@ -1,5 +1,6 @@
 [aws]
 symbol = "  "
+style = "yellow"
 
 [buf]
 symbol = " "
@@ -34,6 +35,11 @@ symbol = " "
 
 [fossil_branch]
 symbol = " "
+
+[gcloud]
+symbol = "   "
+format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
+style = "blue"
 
 [git_branch]
 symbol = " "
