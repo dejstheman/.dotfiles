@@ -20,6 +20,7 @@ symbol = " "
 read_only = " 󰌾"
 
 [docker_context]
+disabled = true
 symbol = " "
 
 [elixir]
@@ -42,7 +43,7 @@ always_show_remote = true
 staged = '+$count'
 deleted = '-$count'
 renamed = '»$count'
-conflicted = '=$count'
+conflicted = '~$count'
 untracked = '?$count'
 modified = '!$count'
 ahead = '⇡$count'
