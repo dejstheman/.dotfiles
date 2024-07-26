@@ -74,11 +74,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Created by `pipx` on 2024-01-09 14:46:49
-export PATH="$PATH:/Users/deji/.local/bin"
-
-eval "$(register-python-argcomplete pipx)"
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+# # Created by `pipx` on 2024-01-09 14:46:49
+# export PATH="$PATH:/Users/deji/.local/bin"
+#
+# eval "$(register-python-argcomplete pipx)"
+# export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PYENV_ROOT="$HOME/.pyenv"
@@ -86,4 +86,14 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 eval "$(starship init zsh)"
+
 eval "$(mcfly init zsh)"
+export MCFLY_RESULTS=50
+export MCFLY_INTERFACE_VIEW=BOTTOM
+export MCFLY_PROMPT="❯"
+export MCFLY_FUZZY=1
+
+_gundo() {
+  local commits="${1:-1}"
+   git reset HEAD~"$commits"
+}
