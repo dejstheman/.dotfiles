@@ -21,7 +21,6 @@
 [commit]
 	template = /Users/deji/.stCommitMsg
 [init]
-	templateDir = /Users/deji/.git-template
 	defaultBranch = main
 [alias]
     cleanup = !git branch --merged | grep  -v '\\*\\|master\\|\\*\\|main\\|develop' | xargs -n 1 git branch -d
