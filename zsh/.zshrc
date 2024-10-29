@@ -95,5 +95,63 @@ export MCFLY_FUZZY=1
 
 _gundo() {
   local commits="${1:-1}"
-   git reset HEAD~"$commits"
+   g reset HEAD~"$commits"
 }
+
+_gcoo() {
+  g checkout -b "$1" origin/"$1"
+}
+
+_get_prs() {
+  repos=("scope3data/scope3" "scope3data/terraform" "scope3data/rtdp" "scope3data/datapipeline" "scope3data/scope3-api")
+  team_name="N/A"
+  user_name=$(gh api user --jq '.login')
+
+  # Color codes
+  RESET="\033[0m"
+  CYAN="\033[36m"
+  GREEN="\033[32m"
+  YELLOW="\033[33m"
+  RED="\033[31m"
+
+  for repo in "${repos[@]}"; do
+        gh pr list --repo "$repo" --state open --json url,title,reviewRequests,reviewDecision --jq ".[] | select(.reviewRequests[]? | select((.name == \"$team_name\" and .__typename == \"Team\") or (.login == \"$user_name\" and .__typename == \"User\"))) | \"\(.title) - \(.url)\"" |
+    awk -v green="$GREEN" -v yellow="$YELLOW" -v red="$RED" -v reset="$RESET" '
+      /APPROVED/ { printf "%s%s%s\n", green, $0, reset }
+      /CHANGES_REQUESTED/ { printf "%s%s%s\n", red, $0, reset }
+      /PENDING/ { printf "%s%s%s\n", yellow, $0, reset }
+      !/APPROVED|CHANGES_REQUESTED|PENDING/ { printf "%s%s%s\n", reset, $0, reset }
+    '
+  done
+}
+
+_get_my_prs() {
+  repos=("scope3data/scope3" "scope3data/terraform" "scope3data/rtdp" "scope3data/datapipeline" "scope3data/scope3-api")
+  user_name=$(gh api user --jq '.login')  # Get the current user's GitHub username
+
+  # Color codes
+  RESET="\033[0m"
+  CYAN="\033[36m"
+  GREEN="\033[32m"
+  YELLOW="\033[33m"
+  RED="\033[31m"
+
+  for repo in "${repos[@]}"; do
+    gh pr list --repo "$repo" --state open --author "$user_name" --json url,title,reviewRequests,reviewDecision |
+    jq -r '.[] |
+      "\(.title) - \(.url) - \(.reviewDecision)"' |
+    awk -v green="$GREEN" -v yellow="$YELLOW" -v red="$RED" -v reset="$RESET" '
+      /APPROVED/ { printf "%s%s%s\n", green, $0, reset }
+      /CHANGES_REQUESTED/ { printf "%s%s%s\n", red, $0, reset }
+      /PENDING/ { printf "%s%s%s\n", yellow, $0, reset }
+      !/APPROVED|CHANGES_REQUESTED|PENDING/ { printf "%s%s%s\n", reset, $0, reset }
+    '
+  done
+}
+
+. "$HOME/.cargo/env"
+
+if [ -f "~/.custom_env.sh" ]; then
+  echo "Loading custom environment variables"
+  source "$HOME/.custom_env.sh"
+fi
