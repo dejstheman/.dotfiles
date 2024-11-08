@@ -151,7 +151,8 @@ _get_my_prs() {
 
 . "$HOME/.cargo/env"
 
-if [ -f "~/.custom_env.sh" ]; then
+
+if [ -f "$HOME/.custom_env.sh" ]; then
   echo "Loading custom environment variables"
   source "$HOME/.custom_env.sh"
 fi
