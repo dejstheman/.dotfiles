@@ -906,3 +906,6 @@ zsdoc/data
 
 ignore.schema.gql
 .husky/prepare-commit-msg
+
+# Claude
+.claude/

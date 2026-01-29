@@ -10,7 +10,6 @@
 	status = auto
 	branch = auto
 [core]
-	editor = code --wait
 	excludesfile = /Users/deji/.gitignore
 	autocrlf = input
 [filter "lfs"]
@@ -43,3 +42,15 @@
 
 [interactive]
     diffFilter = delta --color-only
+[credential]
+	helper = osxkeychain
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
