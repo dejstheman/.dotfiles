@@ -23,8 +23,11 @@ plugins=(
     fzf-tab
     dotenv
     poetry
+    nvm
     )
-autoload -U compinit && compinit
+
+NVM_HOMEBREW=$(brew --prefix nvm)
+zstyle ':omz:plugins:nvm' autoload yes
 
 # shellcheck source=$ZSH/oh-my-zsh.sh
 source "$ZSH"/oh-my-zsh.sh
@@ -81,9 +84,6 @@ export NVM_DIR="$HOME/.nvm"
 # export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 eval "$(starship init zsh)"
 
@@ -95,5 +95,31 @@ export MCFLY_FUZZY=1
 
 _gundo() {
   local commits="${1:-1}"
-   git reset HEAD~"$commits"
+   g reset HEAD~"$commits"
 }
+
+. "$HOME/.cargo/env"
+
+
+if [ -f "$HOME/.custom_env.sh" ]; then
+  echo "Loading custom environment variables"
+  source "$HOME/.custom_env.sh"
+fi
+
+eval "$(temporal completion zsh)"
+
+source <(kubectl completion zsh)
+alias k="kubectl"
+complete -F __start_kubectl k
+
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+
+autoload -U compinit && compinit
+
+source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
