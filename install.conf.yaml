@@ -21,6 +21,10 @@
       force: true
       path: zsh/.zshrc
 
+    ~/.zshenv:
+      force: true
+      path: zsh/.zshenv
+
     ~/.alias:
       force: true
       path: zsh/.alias
