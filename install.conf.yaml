@@ -40,6 +40,16 @@
       path: .git-template/*
 
 - shell:
+    - # rust
+      command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      stdout: true
+      stderr: true
+
+    - # safechain
+      command: curl -fsSL https://github.com/AikidoSec/safe-chain/releases/latest/download/install-safe-chain.sh | sh
+      stdout: true
+      stderr: true
+
     - # homebrew
       command: brew bundle --file=./Brewfile
       stdout: true

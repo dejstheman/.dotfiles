@@ -124,8 +124,6 @@ if [ -f "$HOME/.custom_env.sh" ]; then
   source "$HOME/.custom_env.sh"
 fi
 
-eval "$(temporal completion zsh)"
-
 source <(kubectl completion zsh)
 alias k="kubectl"
 complete -F __start_kubectl k
@@ -139,5 +137,6 @@ export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
 
 autoload -U compinit && compinit
+
 
 source ~/.safe-chain/scripts/init-posix.sh # Safe-chain Zsh initialization script
