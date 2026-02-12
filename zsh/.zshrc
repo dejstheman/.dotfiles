@@ -61,12 +61,30 @@ export PNPM_HOME="/Users/deji/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-preexec() {
-if [ "$(id -u)" -ne 0 ]; then
-echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $ $3" >> ~/.logs/zsh-history-$(date "+%Y-%m-%d").log;
-fi
-}
+# Ensure the base log directory exists
+LOG_DIR="$HOME/.logs/shell"
+mkdir -p "$LOG_DIR"
 
+# Function to log commands
+preexec() {
+  # Only log for non-root users
+  if [ "$(id -u)" -ne 0 ]; then
+    # Get the command safely; fall back to empty string if not set
+    local cmd="${3:-}"
+
+    # Skip empty commands
+    [ -z "$cmd" ] && return
+
+    # Build timestamped log entry
+    local timestamp
+    timestamp="$(date "+%Y-%m-%d.%H:%M:%S")"
+    local cwd
+    cwd="$(pwd)"
+
+    # Append to daily log file
+    echo "$timestamp $cwd $ $cmd" >> "$LOG_DIR/zsh-history-$(date "+%Y-%m-%d").log"
+  fi
+}
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
