@@ -33,9 +33,13 @@
       force: true
       path: tmux/.tmux.conf
 
+    "~/Library/Application Support/com.mitchellh.ghostty/config":
+      force: true
+      path: shell/ghostty/config
+
     ~/.config/starship.toml:
       force: true
-      path: zsh/starship.toml
+      path: shell/starship.toml
 
     ~/.git-template/:
       force: true
@@ -45,7 +49,7 @@
 
 - shell:
     - # rust
-      command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      command: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       stdout: true
       stderr: true
 
