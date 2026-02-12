@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # install command-line tools
 if type xcode-select >&- && xpath=$(xcode-select --print-path) &&
@@ -11,14 +12,22 @@ fi
 
 # Install Homebrew
 if ! which -s brew; then
-  echo "installing homebrew"
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Installing Homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
   echo "Homebrew is already installed"
 fi
 
-echo "Installing pipenv"
+# Install uv
+if ! which -s uv; then
+  echo "Installing uv"
+  brew install uv
+else
+  echo "uv already installed"
+fi
 
-brew install pipenv
-pipenv install
-pipenv run dotbot -c ./install.conf.yaml
+# Create venv + install deps
+uv sync
+
+# Run dotbot
+uv run dotbot -c ./install.conf.yaml
