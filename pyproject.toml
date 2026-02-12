@@ -4,5 +4,5 @@ version = "0.1.0"
 requires-python = "==3.11.*"
 dependencies = [
     "dotbot==1.24.0",
-    "pre-commit==3.6.0",
+    "pre-commit==3.8.0",
 ]
