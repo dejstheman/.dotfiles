@@ -1,33 +1,55 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
-# install command-line tools
-if type xcode-select >&- && xpath=$(xcode-select --print-path) &&
-  test -d "${xpath}" && test -x "${xpath}"; then
-  echo "Command line tools already installed"
+echo "🚀 Starting dotfiles installation..."
+
+########################################
+# 1. Ensure Xcode Command Line Tools
+########################################
+if xcode-select -p &>/dev/null; then
+  echo "✅ Command line tools already installed"
 else
-  echo "Installing command line tools"
-  sudo xcode-select --install
+  echo "📦 Installing Xcode Command Line Tools..."
+  xcode-select --install
+  echo "⚠️ Please re-run this script after installation completes."
+  exit 1
 fi
 
-# Install Homebrew
-if ! which -s brew; then
-  echo "Installing Homebrew"
+########################################
+# 2. Ensure Homebrew
+########################################
+if command -v brew &>/dev/null; then
+  echo "✅ Homebrew already installed"
+else
+  echo "🍺 Installing Homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "Homebrew is already installed"
+
+  # Add brew to PATH (Apple Silicon)
+  if [[ -d "/opt/homebrew/bin" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
 fi
 
-# Install uv
-if ! which -s uv; then
-  echo "Installing uv"
+########################################
+# 3. Ensure uv
+########################################
+if command -v uv &>/dev/null; then
+  echo "✅ uv already installed"
+else
+  echo "📦 Installing uv..."
   brew install uv
-else
-  echo "uv already installed"
 fi
 
-# Create venv + install deps
+########################################
+# 4. Install Python deps (via pyproject.toml)
+########################################
+echo "📦 Syncing Python dependencies..."
 uv sync
 
-# Run dotbot
+########################################
+# 5. Run dotbot
+########################################
+echo "🔧 Running dotbot..."
 uv run dotbot -c ./install.conf.yaml
+
+echo "🎉 Dotfiles installation complete!"
