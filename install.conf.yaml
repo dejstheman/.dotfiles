@@ -50,8 +50,8 @@
       stdout: true
       stderr: true
 
-    - # homebrew
-      command: brew bundle --file=./Brewfile
+    - # zerobrew
+      command: zb bundle --file=./Brewfile
       stdout: true
       stderr: true
 
