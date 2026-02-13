@@ -13,10 +13,6 @@
       force: true
       path: .gitignore
 
-    ~/.alacritty.toml:
-      force: true
-      path: .alacritty.toml
-
     ~/.zshrc:
       force: true
       path: zsh/.zshrc
