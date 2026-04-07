@@ -1,8 +1,8 @@
 . "$HOME/.cargo/env"
 
 # zerobrew
-export ZEROBREW_DIR=/Users/deji/.zerobrew
-export ZEROBREW_BIN=/Users/deji/.zerobrew/bin
+export ZEROBREW_DIR="$HOME/.zerobrew"
+export ZEROBREW_BIN="$HOME/.zerobrew/bin"
 export ZEROBREW_ROOT=/opt/zerobrew
 export ZEROBREW_PREFIX=/opt/zerobrew/prefix
 export PKG_CONFIG_PATH="$ZEROBREW_PREFIX/lib/pkgconfig:${PKG_CONFIG_PATH:-}"
