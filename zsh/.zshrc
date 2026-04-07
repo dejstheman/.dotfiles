@@ -68,7 +68,7 @@ preexec() {
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-[ -f "/Users/deji/.ghcup/env" ] && source "/Users/deji/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 

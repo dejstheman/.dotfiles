@@ -10,7 +10,7 @@
 	status = auto
 	branch = auto
 [core]
-	excludesfile = /Users/deji/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
@@ -18,7 +18,7 @@
 	required = true
 	clean = git-lfs clean -- %f
 [commit]
-	template = /Users/deji/.stCommitMsg
+	template = ~/.stCommitMsg
 [init]
 	defaultBranch = main
 [alias]
