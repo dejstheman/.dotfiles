@@ -4,14 +4,14 @@ requires-python = "==3.14.*"
 
 [[package]]
 name = "dotbot"
-version = "1.24.0"
+version = "1.24.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a6/ee/8ff0180dc5aab1f6fe59aeb66e2eaea20b0dfbc94f3d40ac5047eaf89579/dotbot-1.24.0.tar.gz", hash = "sha256:f2d35eb0a367d1c81d0cd84fcacd1930c64afcbd17013702852a7ee9c104fb65", size = 106259, upload-time = "2025-11-29T20:35:19.437Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ce/99/905f34404698d54de29fbc1dcbb9fdc4b1bbd4b5b30207750ff5ad5b5c69/dotbot-1.24.1.tar.gz", hash = "sha256:83def50fa1625530066f105b88c2dc1c61e27536433488a12324eb0b55a14730", size = 44151, upload-time = "2026-03-14T14:48:35.84Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/43/84/4f87fc1ffffcd15534339169bf9c4291a2c57e2e338fa1a9924be93a8f8e/dotbot-1.24.0-py3-none-any.whl", hash = "sha256:35409b3d8fcfe13623400a5256c5b79f515895e132f514b00d072bce54d6660c", size = 27349, upload-time = "2025-11-29T20:35:18.093Z" },
+    { url = "https://files.pythonhosted.org/packages/6f/f3/50612e0c3275ee85f349dd4f3e8d965e5f0a63806280bf07dda247018c43/dotbot-1.24.1-py3-none-any.whl", hash = "sha256:03236a2bdfa604966b73774430acf056a37155c84247285b6b18caaf24796f4d", size = 27568, upload-time = "2026-03-14T14:48:34.479Z" },
 ]
 
 [[package]]
@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "dotbot", specifier = "==1.24.0" }]
+requires-dist = [{ name = "dotbot", specifier = "==1.24.1" }]
 
 [[package]]
 name = "pyyaml"
