@@ -43,7 +43,7 @@ style = "blue"
 
 [git_branch]
 symbol = " "
-always_show_remote = true
+always_show_remote = false
 
 [git_status]
 staged = '+$count'
