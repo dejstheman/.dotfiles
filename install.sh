@@ -16,18 +16,16 @@ else
 fi
 
 ########################################
-# 2. Ensure Homebrew
+# 2. Ensure Zerobrew
 ########################################
-if command -v brew &>/dev/null; then
-  echo "✅ Homebrew already installed"
+if command -v zb &>/dev/null; then
+  echo "✅ Zerobrew already installed"
 else
-  echo "🍺 Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "🍺 Installing Zerobrew..."
+  curl -fsSL https://zerobrew.rs/install | bash
 
-  # Add brew to PATH (Apple Silicon)
-  if [[ -d "/opt/homebrew/bin" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-  fi
+  # Source the export command printed by installer
+  eval "$("$HOME/.zerobrew/bin/zb" shellenv)"
 fi
 
 ########################################
@@ -37,7 +35,7 @@ if command -v uv &>/dev/null; then
   echo "✅ uv already installed"
 else
   echo "📦 Installing uv..."
-  brew install uv
+  zb install uv
 fi
 
 ########################################
